@@ -1,13 +1,10 @@
 ﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestNinja.Fundamentals;
 
-namespace TestNinja
+namespace TestNinja.UnitTests
 {
     //[TestClass]
     [TestFixture]
@@ -24,8 +21,8 @@ namespace TestNinja
             // Act
             bool result = reservation.CanBeCancelledBy(user);
             // Assert
-            //Assert.IsTrue(result);
-            Assert.That(user.IsAdmin, Is.True);
+           // Assert.IsTrue(result);
+           Assert.That(user.IsAdmin, Is.True);
         }
 
 
@@ -46,7 +43,7 @@ namespace TestNinja
         }
 
         //[TestMethod]
-        [Test]
+       [Test]
         public void CanBeCancelledBy_User_ReturnsFalse()
         {
             // Arrange
